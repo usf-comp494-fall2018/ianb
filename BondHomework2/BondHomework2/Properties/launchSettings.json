@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BondHomework2": {
+      "commandName": "Project",
+      "commandLineArgs": "Tom Bob Dana Julie Sarah Fred Waldo Jenny Cathy"
+    }
+  }
+}
