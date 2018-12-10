@@ -8,11 +8,11 @@ namespace BondFinal.Models
 {
     class ThreeDay
     {
-        public int ThreeDayID { get; set; }
+        public int Id { get; set; }
         public int Period { get; set; }
         public string Icon { get; set; }
-        public string Day { get; set; }
-        public string ThreeDayDesciption {get; set;}
-        public DateTime ThreeDayLastChecked { get; set; }
+        public string Title { get; set; }
+        public string Fcttext { get; set; }
+        public DateTime Lastcheck { get; set; }
     }
 }

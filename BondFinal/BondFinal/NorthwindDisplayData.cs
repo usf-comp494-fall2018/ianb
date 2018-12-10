@@ -8,6 +8,10 @@ namespace BondFinal
 {
     class NorthwindDisplayData
     {
-        public string Info { get; set; }
+        public int Id { get; set; }
+        public string DisplayLargeText { get; set; }
+        public string DisplaySmallText { get; set; }
+        public string Date { get; set; }
+        public string ImagePath { get; set; }
     }
 }

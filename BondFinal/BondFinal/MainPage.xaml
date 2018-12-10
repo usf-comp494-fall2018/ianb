@@ -7,42 +7,62 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource SystemControlAcrylicWindowBrush}">
-    <Grid Name="bg">
-        <!--<Grid.Background>
-            <ImageBrush Stretch="UniformToFill" Opacity="50"
-                ImageSource="Assets/torchic_wallpaper_by_seviyummy-d785y62.png"/>
-        </Grid.Background>-->
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/LKPHBha.jpg"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" MaxWidth="250" MinWidth="175"/>
-            <ColumnDefinition Width="3*"/>
-        </Grid.ColumnDefinitions>
-        <StackPanel Name="Menu" Orientation="Vertical" Grid.Column="0" Background="Azure">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="70"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                </Grid.RowDefinitions>
-                <TextBlock Text="Northwind Weather App" Grid.Row="0" HorizontalAlignment="Center"
+        <ColumnDefinition Width="1*" MaxWidth="250" MinWidth="175"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    <StackPanel Name="Menu" Orientation="Vertical" Grid.Column="0">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Northwind Weather App" Grid.Row="0" HorizontalAlignment="Center"
                             Foreground="Black" VerticalAlignment="Center"/>
-                <Button Name="CurrentCondtionsButton" Background="DarkGoldenrod" Grid.Row="1" HorizontalAlignment="Center" 
-                        Width="150" Foreground="Black" Click="CurrentCondtionsButton_Click">
-                    Current Condtions
-                </Button>
-                <Button Name="ThreeDayForcastButton" Background="DarkGoldenrod" Grid.Row="2" HorizontalAlignment="Center"
-                        Width="150" Foreground="Black" Click="ThreeDayForcastButton_Click">
+            <Button Name="CurrentCondtionsButton" Background="DarkGoldenrod" Grid.Row="1"
+                        HorizontalAlignment="Center" Width="150" Foreground="Black" 
+                        Click="CurrentCondtionsButton_Click">
+                Current Condtions
+            </Button>
+            <Button Name="ThreeDayForcastButton" Background="DarkGoldenrod" Grid.Row="2"
+                    HorizontalAlignment="Center" Width="150" Foreground="Black" 
+                    Click="ThreeDayForcastButton_Click">
                     Three Day Forcast
-                </Button>
+            </Button>
             </Grid>
-        </StackPanel>
-        <ListView Name="results" ScrollViewer.VerticalScrollBarVisibility="Auto" Grid.Column="1">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal" Margin="10">
-                        <TextBlock Text="{Binding Info}" FontSize="24"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+    </StackPanel>
+    <ListView Name="results" ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  ScrollViewer.HorizontalScrollMode="Disabled" Grid.Column="1">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <StackPanel Orientation="Vertical" Margin="20">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="48"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="{Binding ImagePath}" Grid.Row="0" Grid.RowSpan="3"
+                                   Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        <TextBlock Text="{Binding DisplayLargeText}" FontSize="28" Grid.Column="1" Grid.Row="0"
+                                       Foreground="Black"/>
+                        <TextBlock Text="{Binding DisplaySmallText}" FontSize="24" Grid.Column="1" Grid.Row="1"
+                                       Foreground="Black" TextWrapping="WrapWholeWords"/>
+                        <TextBlock Text="{Binding Date}" FontSize="10" Grid.Column="1" Grid.Row="2"
+                                       Foreground="Black" TextWrapping="WrapWholeWords"/>
+                    </Grid>
+                </StackPanel>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
     </Grid>
 </Page>

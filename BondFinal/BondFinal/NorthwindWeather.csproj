@@ -98,6 +98,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\CurrentConditions.cs" />
     <Compile Include="Models\ThreeDay.cs" />
     <Compile Include="NorthwindDisplayData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,6 +110,17 @@
     <None Include="BondFinal_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Final Project Icons\Default.png" />
+    <Content Include="Assets\Final Project Icons\Moon.png" />
+    <Content Include="Assets\Final Project Icons\NightPartlyCloudy.png" />
+    <Content Include="Assets\Final Project Icons\Overcast.png" />
+    <Content Include="Assets\Final Project Icons\PartlyCloudy.png" />
+    <Content Include="Assets\Final Project Icons\Rain.png" />
+    <Content Include="Assets\Final Project Icons\Snow.png" />
+    <Content Include="Assets\Final Project Icons\Sunny.png" />
+    <Content Include="Assets\Final Project Icons\Thunderstorm.png" />
+    <Content Include="Assets\Final Project Icons\Windy.png" />
+    <Content Include="Assets\LKPHBha.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -131,6 +143,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.1.7</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
